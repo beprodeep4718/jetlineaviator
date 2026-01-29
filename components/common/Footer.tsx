@@ -1,6 +1,7 @@
 "use client";
 
 import { Mail, Phone, MapPin, MoveRight } from "lucide-react";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -13,9 +14,13 @@ const Footer = () => {
 
         {/* BRAND */}
         <div className="md:col-span-1">
-          <h2 className="font-[outfit-bold] text-2xl mb-4">
-            Jetlineaviator
-          </h2>
+          <Image
+                      src="/images/logo-dark-transparent.png"
+                      alt="Skyway Logo"
+                      width={180}
+                      height={36}
+                      className="rounded-md object-cover"
+                    />
           <p className="text-white/70 text-sm leading-relaxed">
             Delivering world-class aviation consulting, compliance, and
             operational solutions across global markets.

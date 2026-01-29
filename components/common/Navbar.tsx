@@ -10,15 +10,12 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center gap-3">
           <Image
-            src="/images/logo.jpg"
+            src="/images/logo-dark-transparent.png"
             alt="Skyway Logo"
-            width={36}
+            width={180}
             height={36}
             className="rounded-md object-cover"
           />
-          <span className="text-white font-semibold text-lg tracking-wide">
-            JETLINE<span className="text-[#FE0241]">AVIATOR</span>
-          </span>
         </div>
 
         {/* Desktop Links */}
