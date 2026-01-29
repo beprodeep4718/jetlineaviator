@@ -1,78 +1,96 @@
-import { Briefcase, Building, Calendar, Globe, Home, MoveRight } from 'lucide-react'
+import {
+  Briefcase,
+  Building,
+  Calendar,
+  Globe,
+  Home,
+  MoveRight,
+} from "lucide-react";
 
 type Service = {
-    icon: React.ReactElement
-    title: string
-    description: string
-}
+  icon: React.ReactElement;
+  title: string;
+  description: string;
+};
 
 const Whychooseus: React.FC = () => {
-    const services: Service[] = [
-        {
-            icon: <Calendar strokeWidth={"1.5"} />,
-            title: "Experience You Can Trust",
-            description:
-                "With decades of experience in the aviation sector, our team brings unparalleled insight and expertise to every project.",
-        },
-        {
-            icon: <Globe strokeWidth={"1.5"}/>,
-            title: "Global Reach, Local Focus",
-            description:
-                "We’ve worked with clients across continents, offering global solutions with localized expertise.",
-        },
-        {
-            icon: <MoveRight strokeWidth={"1.5"}/>,
-            title: "Customized Solutions",
-            description:
-                "Every client’s needs are unique, and we tailor our services to meet the specific requirements of your business.",
-        },
-        {
-            icon: <Home strokeWidth={"1.5"}/>,
-            title: "Industry-Leading Experts",
-            description:
-                "Our team consists of seasoned professionals with deep expertise in aircraft management, licensing, training, and certification.",
-        },
-        {
-            icon: <Building strokeWidth={"1.5"}/>,
-            title: "Innovative Approach",
-            description:
-                "We stay ahead of industry trends, leveraging the latest technology and best practices to provide innovative, forward-thinking solutions for our clients.",
-        },
-        {
-            icon: <Briefcase strokeWidth={"1.5"}/>,
-            title: "24/7 Client Support",
-            description:
-                "Our dedicated team is available around the clock to provide ongoing support, ensuring that any issues are swiftly addressed, and your operations run smoothly.",
-        },
-    ]
-    return (
-        <section className="relative flex flex-col items-center justify-center w-full">
-            <div className="w-full flex items-center justify-center relative py-10">
-                <h1 className="md:text-8xl text-4xl font-[outfit-bold] uppercase tracking-wider text-muted-foreground/5">
-                    Jetlineaviator
-                </h1>
-                <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-                    <h1 className="font-[outfit-bold] md:text-4xl text-2xl">Why Choose Us ?</h1>
-                </div>
-            </div>
-            <div className="flex w-full max-w-6xl items-center justify-center flex-wrap">
-                {services.map((item) => (
-                    <div
-                        key={item.title}
-                        className="w-1/3 min-w-[320px] flex flex-col items-center px-8 py-10"
-                    >
-                        <span className="text-5xl mb-4 text-[#FE0241]">{item.icon}</span>
-                        <h2 className="font-[outfit-bold] text-2xl mb-2 text-center">
-                            {item.title}
-                        </h2>
-                        <p className="text-center font-[outfit] text-muted-foreground">
-                            {item.description}
-                        </p>
-                    </div>
-                ))}
-            </div>
-        </section>
-    )
-}
+  const services: Service[] = [
+    {
+      icon: <Calendar strokeWidth={1.5} />,
+      title: "Experience You Can Trust",
+      description:
+        "Decades of real-world aviation experience delivering reliable, compliant, and efficient operations.",
+    },
+    {
+      icon: <Globe strokeWidth={1.5} />,
+      title: "Global Reach, Local Focus",
+      description:
+        "International expertise combined with deep understanding of regional aviation regulations.",
+    },
+    {
+      icon: <MoveRight strokeWidth={1.5} />,
+      title: "Customized Solutions",
+      description:
+        "Tailored consulting strategies built around your operational and business goals.",
+    },
+    {
+      icon: <Home strokeWidth={1.5} />,
+      title: "Industry-Leading Experts",
+      description:
+        "Specialists in aircraft management, licensing, training, and certification.",
+    },
+    {
+      icon: <Building strokeWidth={1.5} />,
+      title: "Innovative Approach",
+      description:
+        "Modern tools, evolving compliance strategies, and forward-thinking operations.",
+    },
+    {
+      icon: <Briefcase strokeWidth={1.5} />,
+      title: "24/7 Client Support",
+      description:
+        "Dedicated support teams ensuring uninterrupted operations and rapid response.",
+    },
+  ];
 
-export default Whychooseus
+  return (
+    <section className="w-full bg-[#050B1E] text-white py-32">
+      <div className="max-w-7xl mx-auto px-6">
+
+        {/* Header */}
+        <div className="max-w-2xl mb-16">
+          <p className="text-sm tracking-widest text-[#FE0241] mb-4">
+            WHY CHOOSE US
+          </p>
+          <h2 className="text-4xl md:text-5xl font-[outfit] leading-tight">
+            Trusted Aviation Consulting <br /> Built on Experience
+          </h2>
+        </div>
+
+        {/* Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((item) => (
+            <div
+              key={item.title}
+              className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-[#FE0241]/50 transition"
+            >
+              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[#FE0241]/10 text-[#FE0241] mb-6">
+                {item.icon}
+              </div>
+
+              <h3 className="text-xl font-semibold mb-3">
+                {item.title}
+              </h3>
+
+              <p className="text-sm text-white/70 leading-relaxed">
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Whychooseus;

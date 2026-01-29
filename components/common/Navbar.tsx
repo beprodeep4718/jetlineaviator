@@ -1,23 +1,35 @@
-import { Menu } from 'lucide-react'
-import React from 'react'
+import { Menu } from "lucide-react";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className='fixed z-50 top-0 left-0 w-full flex items-center justify-center bg-background'>
-        <nav className=' md:w-11/12 grid grid-cols-[auto_1fr_auto] bg-background items-center border-b border-gray-300'>
-            <div className='logo md:px-4 px-2 col-start-1 col-end-2'>
-                LOGO
-            </div>
-            <div className="px-4 py-6 border-l border-r border-[#494948] w-full col-start-2 col-end-3 flex flex-col text-[6px] md:text-lg font-[outfit] justify-center">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, consequatur ipsam. Assumenda!</p>
-            </div>
-            <div className='md:px-4 px-2 w-full col-start-3 col-end-4 flex justify-center items-center'>
-                <Menu />
-            </div>
-        </nav>
-        <div className='h-px w-full absolute bottom-0 left-0 bg-[#494948]'></div>
-    </div>
-  )
-}
+    <header className="fixed top-0 left-0 w-full z-50 bg-[#050B1E]/80 backdrop-blur-md border-b border-white/10">
+      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
 
-export default Navbar
+        {/* Logo */}
+        <div className="text-white font-bold text-lg tracking-wide">
+          SKY<span className="text-[#FE0241]">WAY</span>
+        </div>
+
+        {/* Desktop Links */}
+        <nav className="hidden md:flex items-center gap-10 text-white/80 text-sm">
+          <Link href="#" className="hover:text-white transition">Home</Link>
+          <Link href="#" className="hover:text-white transition">Services</Link>
+          <Link href="#" className="hover:text-white transition">Training</Link>
+          <Link href="#" className="hover:text-white transition">Contact</Link>
+        </nav>
+
+        {/* Right Actions */}
+        <div className="flex items-center gap-4">
+          <button className="hidden md:block px-5 py-2 rounded-lg bg-[#FE0241] text-white text-sm hover:scale-105 transition">
+            Get Started
+          </button>
+          <Menu className="md:hidden text-white" />
+        </div>
+
+      </div>
+    </header>
+  );
+};
+
+export default Navbar;

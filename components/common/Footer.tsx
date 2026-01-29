@@ -4,72 +4,74 @@ import { Mail, Phone, MapPin, MoveRight } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="relative w-full mt-20">
+    <footer className="w-full bg-[#050B1E] text-white">
 
-      {/* top divider */}
-      <div className="w-full h-px bg-[#494948]" />
+      {/* CTA STRIP */}
 
-      {/* background brand */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <h1 className="text-3xl md:text-9xl font-[outfit-bold] uppercase tracking-widest text-muted-foreground/5">
-          Jetlineaviator
-        </h1>
-      </div>
+      {/* MAIN FOOTER */}
+      <div className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-4 gap-12">
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-3 gap-12">
-
-        {/* Brand */}
-        <div>
-          <h2 className="font-[outfit-bold] text-2xl mb-4">Jetlineaviator</h2>
-          <p className="font-[outfit] text-muted-foreground max-w-sm">
-            Connecting East and West with premium aviation services, operational
-            excellence, and industry-leading expertise.
+        {/* BRAND */}
+        <div className="md:col-span-1">
+          <h2 className="font-[outfit-bold] text-2xl mb-4">
+            Jetlineaviator
+          </h2>
+          <p className="text-white/70 text-sm leading-relaxed">
+            Delivering world-class aviation consulting, compliance, and
+            operational solutions across global markets.
           </p>
         </div>
 
-        {/* Quick Links */}
+        {/* LINKS */}
         <div>
-          <h3 className="font-[outfit-bold] mb-4">Explore</h3>
-          <ul className="space-y-3 font-[outfit] text-muted-foreground">
+          <h4 className="font-semibold mb-4">Company</h4>
+          <ul className="space-y-3 text-sm text-white/70">
             <li className="hover:text-white transition cursor-pointer">About</li>
-            <li className="hover:text-white transition cursor-pointer">Services</li>
             <li className="hover:text-white transition cursor-pointer">Why Choose Us</li>
-            <li className="hover:text-white transition cursor-pointer">Apply</li>
+            <li className="hover:text-white transition cursor-pointer">Careers</li>
+            <li className="hover:text-white transition cursor-pointer">Contact</li>
           </ul>
         </div>
 
-        {/* Contact */}
         <div>
-          <h3 className="font-[outfit-bold] mb-4">Contact</h3>
+          <h4 className="font-semibold mb-4">Services</h4>
+          <ul className="space-y-3 text-sm text-white/70">
+            <li className="hover:text-white transition cursor-pointer">Consulting</li>
+            <li className="hover:text-white transition cursor-pointer">Training</li>
+            <li className="hover:text-white transition cursor-pointer">Licensing</li>
+            <li className="hover:text-white transition cursor-pointer">Operations</li>
+          </ul>
+        </div>
 
-          <div className="space-y-4 font-[outfit] text-muted-foreground">
+        {/* CONTACT */}
+        <div>
+          <h4 className="font-semibold mb-4">Contact</h4>
+
+          <div className="space-y-4 text-sm text-white/70">
             <div className="flex items-center gap-3">
-              <MapPin size={18} />
-              <span>Kyrgyzstan, Central Asia</span>
+              <MapPin size={18} className="text-[#FE0241]" />
+              <span>Kyrgyzstan • Central Asia</span>
             </div>
 
             <div className="flex items-center gap-3">
-              <Mail size={18} />
+              <Mail size={18} className="text-[#FE0241]" />
               <span>info@jetlineaviator.com</span>
             </div>
 
             <div className="flex items-center gap-3">
-              <Phone size={18} />
+              <Phone size={18} className="text-[#FE0241]" />
               <span>+996 XXX XXX XXX</span>
             </div>
-
-            <button className="mt-4 inline-flex items-center gap-3 text-[#FE0241] hover:gap-4 transition-all">
-              Contact Us <MoveRight size={18} />
-            </button>
           </div>
         </div>
       </div>
 
-      {/* bottom bar */}
-      <div className="w-full h-px bg-[#494948]" />
-
-      <div className="py-6 text-center text-sm font-[outfit] text-muted-foreground">
-        © {new Date().getFullYear()} Jetlineaviator. All rights reserved.
+      {/* BOTTOM BAR */}
+      <div className="border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-6 py-6 text-sm text-white/50 flex flex-col md:flex-row items-center justify-between gap-4">
+          <span>© {new Date().getFullYear()} Jetlineaviator. All rights reserved.</span>
+          <span>Privacy Policy • Terms of Service</span>
+        </div>
       </div>
     </footer>
   );

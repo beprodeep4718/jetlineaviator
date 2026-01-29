@@ -11,20 +11,40 @@ export default function Home() {
       <Hero />
       <About />
       <Whychooseus />
-      <section className="relative flex flex-col items-center justify-center w-full">
-        <div className="w-full h-px bg-[#494948] absolute top-0 left-0"></div>
-        <div className="w-full grid grid-cols-12 grid-rows-[auto]">
-          <Image
-            width={600}
-            height={400}
-            className="w-full row-start-1 row-end-2 col-start-1 col-end-11"
-            src="/images/airplane.webp"
-            alt=""
-          />
-          <div className="h-full bg-[#494948] w-px row-start-1 row-end-2 col-start-11 col-end-12"></div>
+      <section className="relative w-full h-[70vh] min-h-105 overflow-hidden">
+        {/* Background Image */}
+        <Image
+          src="/images/airplane.webp"
+          alt="Aircraft in flight"
+          fill
+          priority
+          className="object-cover"
+        />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-linear-to-r from-[#050B1E]/90 via-[#050B1E]/60 to-transparent" />
+
+        {/* Content */}
+        <div className="relative z-10 h-full max-w-7xl mx-auto px-6 flex items-center">
+          <div className="max-w-xl text-white">
+            <h2 className="text-4xl md:text-5xl font-[outfit] leading-tight">
+              Comprehensive <br /> Aviation Solutions
+            </h2>
+
+            <p className="mt-6 text-white/80 text-base md:text-lg">
+              At Jetlineaviator, we deliver end-to-end aviation solutions — from
+              aircraft acquisition and management to financing, licensing,
+              training, and certification — helping operators and engineers stay
+              compliant, efficient, and future-ready.
+            </p>
+
+            <button className="mt-8 inline-flex items-center gap-3 px-8 py-4 bg-[#FE0241] rounded-xl text-white font-medium hover:scale-105 transition">
+              Explore Our Services
+            </button>
+          </div>
         </div>
-        <div className="w-full h-px bg-[#494948] absolute bottom-0 left-0"></div>
       </section>
+
       <RegistrationForm />
     </main>
   );
