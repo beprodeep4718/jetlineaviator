@@ -11,7 +11,7 @@ const Footer = () => {
 
       {/* background brand */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <h1 className="text-8xl md:text-9xl font-[outfit-bold] uppercase tracking-widest text-muted-foreground/5">
+        <h1 className="text-3xl md:text-9xl font-[outfit-bold] uppercase tracking-widest text-muted-foreground/5">
           Jetlineaviator
         </h1>
       </div>

@@ -35,7 +35,7 @@ const RegistrationForm = () => {
   return (
     <section className="relative flex flex-col items-center justify-center w-full">
       <div className="w-full max-w-6xl flex items-center justify-center flex-col py-10">
-        <h1 className="text-4xl font-[outfit-bold]">
+        <h1 className="text-4xl text-center font-[outfit-bold]">
           Let&apos;s Fly High Together
         </h1>
         <p className="font-[outfit] my-6 text-center text-muted-foreground max-w-4xl">

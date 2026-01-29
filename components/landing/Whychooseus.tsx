@@ -48,11 +48,11 @@ const Whychooseus: React.FC = () => {
     return (
         <section className="relative flex flex-col items-center justify-center w-full">
             <div className="w-full flex items-center justify-center relative py-10">
-                <h1 className="text-8xl font-[outfit-bold] uppercase tracking-wider text-muted-foreground/5">
+                <h1 className="md:text-8xl text-4xl font-[outfit-bold] uppercase tracking-wider text-muted-foreground/5">
                     Jetlineaviator
                 </h1>
                 <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-                    <h1 className="font-[outfit-bold] text-4xl">Why Choose Us ?</h1>
+                    <h1 className="font-[outfit-bold] md:text-4xl text-2xl">Why Choose Us ?</h1>
                 </div>
             </div>
             <div className="flex w-full max-w-6xl items-center justify-center flex-wrap">
